@@ -1,0 +1,10 @@
+from restaurant.views.order import OrderListCreateView ,OrderDetailView
+from restaurant.views.order_item import OrderItemListCreateView,OrderItemDetailView
+from restaurant.views.order_item_modification import OrderItemModificationListCreateView,OrderItemModificationDetailView
+from restaurant.views.menu_item import MenuItemDetailView,MenuItemListCreateView
+from restaurant.views.ingredient import IngredientDetailView,IngredientListCreateView
+from restaurant.views.discount import DiscountDetailView,DiscountListCreateView
+from restaurant.views.payment import PaymentDetailView,PaymentListCreateView
+from restaurant.views.customers import CustomerLoginView,CustomerListCreateView,CustomerDetailView,CustomerSignUpView
+from restaurant.views.table import TableListCreateView, TableDetailView
+from restaurant.views.reservation import ReservationListCreateView, ReservationDetailView
