@@ -1,0 +1,7 @@
+// filepath: c:\Users\kamar aldiab\EcoFood\tsconfig.base.json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true
+  }
+}

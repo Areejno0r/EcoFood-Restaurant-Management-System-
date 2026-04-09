@@ -1,0 +1,217 @@
+
+body {
+    margin: 0;
+    font-family: 'Cairo', Arial, sans-serif;
+    background: linear-gradient(120deg, #e8f5e9 0%, #d1fae5 100%);
+    min-height: 100vh;
+}
+
+/* حاوية الواجهة */
+.form-container {
+    width: 100%;
+    max-width: 32rem;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    margin: 70px auto 0 auto;
+    background: rgba(255,255,255,0.98);
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px rgba(40,167,69,0.10);
+    border: 1.5px solid #e0f2f1;
+    position: relative;
+}
+
+/* عنوان الواجهة */
+.form-title {
+    text-align: center;
+    background: linear-gradient(90deg, #16a34a 20%, #28a745 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #16a34a;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Cairo', 'Segoe UI', Arial, sans-serif;
+    text-shadow: 0 2px 8px rgba(40,167,69,0.10);
+    text-transform: uppercase;
+}
+
+/* مجموعة الحقول */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #198754;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* الحقول */
+input,
+textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #c3e6cb;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-top: 2px;
+    box-sizing: border-box;
+    font-family: 'Cairo', Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #16a34a;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.10);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #16a34a;
+    opacity: 1;
+}
+
+/* مجموعة الأزرار */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+/* أزرار اختيار طريقة الدفع والاستلام */
+.signup-btn,
+.login-btn {
+    min-width: 120px;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.08);
+    text-align: center;
+}
+
+.signup-btn {
+    background: linear-gradient(90deg, #16a34a 60%, #28a745 100%);
+    color: #fff;
+}
+
+.signup-btn.active,
+.signup-btn:hover {
+    background: linear-gradient(90deg, #15803d 60%, #16a34a 100%);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 16px rgba(40, 167, 69, 0.13);
+}
+
+.login-btn {
+    background: #e8f5e9;
+    color: #16a34a;
+    border: 1.5px solid #16a34a;
+}
+
+.login-btn.active,
+.login-btn:hover {
+    background: #16a34a;
+    color: #fff;
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* زر إظهار CVV */
+.show-password-btn {
+    background: none;
+    border: none;
+    color: #198754;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+/* زر تأكيد الطلب */
+.main-submit-btn {
+    display: block;
+    margin: 2rem auto 0 auto;
+    width: 70%;
+    background: linear-gradient(90deg, #198754 40%, #16a34a 100%);
+    color: #fff;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 16px rgba(40, 167, 69, 0.14), 0 1.5px 6px rgba(30, 64, 19, 0.07);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.main-submit-btn:hover {
+    background: linear-gradient(90deg, #28a745 40%, #15803d 100%);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(40, 167, 69, 0.18);
+}
+
+.main-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* رسالة النتيجة */
+.form-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* زر تبديل اللغة */
+.footer-toggle-btn {
+    background: linear-gradient(90deg, #16a34a 60%, #28a745 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.10);
+}
+
+.footer-toggle-btn:hover {
+    background: linear-gradient(90deg, #15803d 60%, #16a34a 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(40, 167, 69, 0.13);
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 1.2rem 0.5rem;
+    }
+    .form-title {
+        font-size: 1.2rem;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .main-submit-btn {
+        width: 90%;
+    }
+}
